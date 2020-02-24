@@ -5,7 +5,7 @@ function dwarfRollCall(dwarves) {
   } return numberedDwarves.join('');
 }
 
-function summonCaptainPlanet(planeteerCalls){
+function summonCaptainPlanet(planeteerCalls) {
   let planeteerYells = [];
   for (let i = 0; i < planeteerCalls.length; i++) {
     planeteerYells.push(`${planeteerCalls[i].toUpperCase()}!`);
@@ -13,23 +13,19 @@ function summonCaptainPlanet(planeteerCalls){
 }
 
 function longPlaneteerCalls(words) {
-  let wordCheck = [];
   for (let i = 0; i < words.length; i++) {
-    wordCheck = words[i].split('');
-    if (wordCheck.length > 4) {
+    if (words[i].length > 4) {
       return true;
-    } else {
-      return false;
     }
-  }
+  } return false;
 }
 
 function findTheCheese (foods) {
   let cheese = ["cheddar", "gouda", "camembert"];
   for (let i = 0; i < foods.length; i++) {
-    for (let a = 0; a < cheese.length; a++) {
+    for (let a = cheese.length - 1; a >= 0; a--) {
       let specificCheese = cheese[a];
-      if (foods[i] === specificCheese) {
+      if (foods[i] == specificCheese) {
         return foods[i]; 
       } 
     } 
